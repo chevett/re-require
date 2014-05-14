@@ -15,3 +15,8 @@ var strNewCode = rerequire(strOldCode, function(){
   console.dir(this.value);
 });
 ```
+
+to get the single argument
+```
+this.value.arguments[0].value
+```
