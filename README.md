@@ -1,4 +1,4 @@
-rerequire absolurl [![Build Status](https://travis-ci.org/chevett/rerequire.png)](https://travis-ci.org/chevett/rerequire)
+rerequire [![Build Status](https://travis-ci.org/chevett/re-require.png)](https://travis-ci.org/chevett/re-require)
 =========
 
 find some require statements and maybe change them if you feel like it
