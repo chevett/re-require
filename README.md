@@ -5,7 +5,7 @@ find some require statements and maybe change them if you feel like it
 
 
 ```js
-var rerequire = require('rerequire');
+var rerequire = require('re-require');
 var fs = require('fs');
 var strOldCode = fs.readFileSync('./your-killer-module.js', 'utf-8');
 
