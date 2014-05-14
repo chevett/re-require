@@ -1,5 +1,5 @@
 var esprima = require('esprima'),
-	merle = require('merle'),
+	walker = require('merle'),
 	escodegen = require('escodegen');
 
 // um, i guess this is good enough... :/
@@ -16,10 +16,14 @@ function _isRequire(node){
 function _transform(strCode, fn){
 	var ast = esprima.parse(strCode);
 
-	merle(ast, function(){
+	walker(ast, function(){
 		if (!_isRequire(this.value)) return;
 
-		fn.call(this);
+		var hasArg = this.value && 
+			this.value.arguments && 
+			this.value.arguments.length === 1;
+			
+		fn.call(this, hasArg? this.value.arguments[0].value : undefined);
 	});
 
 	return escodegen.generate(ast);
