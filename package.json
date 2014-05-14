@@ -1,5 +1,5 @@
 {
-  "name": "rerequire",
+  "name": "re-require",
   "version": "0.0.0",
   "description": "find the require calls and change them",
   "main": "index.js",
